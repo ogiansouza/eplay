@@ -1,4 +1,4 @@
-import { Container, Title } from './styles'
+import * as S from './styles'
 
 export type Props = {
   title: string
@@ -7,12 +7,12 @@ export type Props = {
 }
 
 const Section = ({ title, background, children }: Props) => (
-  <Container background={background}>
+  <S.Container background={background}>
     <div className="container">
-      <Title>{title}</Title>
+      <S.Title>{title}</S.Title>
       {children}
     </div>
-  </Container>
+  </S.Container>
 )
 
 export default Section
