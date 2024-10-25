@@ -37,8 +37,10 @@ const carrinhoSlice = createSlice({
       )
       if (index >= 0) {
         state.itens[index].qtd--
-        if (state.itens[index].qtd <= 0) {
-          state.itens = state.itens.filter((item) => item.id !== index)
+        if (state.itens[index].qtd < 1) {
+          state.itens = state.itens.filter(
+            (item) => item.id !== action.payload.id
+          )
         }
       }
     },
@@ -48,7 +50,9 @@ const carrinhoSlice = createSlice({
       )
 
       if (index >= 0) {
-        state.itens = state.itens.filter((item) => item.id !== index)
+        state.itens = state.itens.filter(
+          (item) => item.id !== action.payload.id
+        )
       }
     }
   }
