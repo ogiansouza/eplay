@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { GlobalCss } from './styles'
 
 import Footer from './components/Footer'
-import Home from './pages/Perfil'
-import Perfil from './pages/Home'
+import Home from './pages/Home'
+import Perfil from './pages/Perfil'
 
 const Rotas = () => (
   <Routes>

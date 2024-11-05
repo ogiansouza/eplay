@@ -1,11 +1,13 @@
-import HeaderHome from '../../components/HeaderHome'
-import RestaurantsList from '../../components/RestaurantsList'
+import Banner from '../../components/Banner'
+import Header from '../../components/Header'
+import ProductsList from '../../components/ProductsList'
 
-const Home = () => (
+const Perfil = () => (
   <>
-    <HeaderHome />
-    <RestaurantsList />
+    <Header />
+    <Banner />
+    <ProductsList />
   </>
 )
 
-export default Home
+export default Perfil
