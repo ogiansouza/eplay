@@ -8,8 +8,8 @@ import Perfil from './pages/Home'
 
 const Rotas = () => (
   <Routes>
-    <Route path="/" element={<Home />} />
     <Route path="/restaurantes" element={<Perfil />} />
+    <Route path="/" element={<Home />} />
   </Routes>
 )
 
