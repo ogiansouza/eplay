@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
-import Avaliacao from '../Notas'
+import Avaliacao from '../Avaliacao'
+import Button from '../Button'
+import { ButtonLink } from '../Button/styles'
 
 export const Card = styled.div`
   background-color: ${cores.branca};
@@ -9,16 +11,19 @@ export const Card = styled.div`
   border-right: 1px solid ${cores.vermelho};
   border-bottom: 1px solid ${cores.vermelho};
   border-left: 1px solid ${cores.vermelho};
-  margin-bottom: 48px;
   padding-bottom: 8px;
   position: relative;
 
-  img {
-    border: transparent;
+  > img {
+    display: block;
+    width: 100%;
+    height: 217px;
   }
-
   ${TagContainer} {
     margin-right: 8px;
+  }
+  ${ButtonLink} {
+    margin-bottom: 8px;
   }
 `
 

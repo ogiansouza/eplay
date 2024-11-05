@@ -1,37 +1,40 @@
-import Avaliacao from '../Notas'
+import Avaliacao from '../Avaliacao'
 import Button from '../Button'
+import { ButtonLink } from '../Button/styles'
 import Tag from '../Tag'
 import { Card, TitleCard, Descricao, CardSection, Infos, Rate } from './styles'
 
 type Props = {
-  title: string
-  description: string
-  infos: string[]
-  image: string
-  rates: string[]
+  titulo: string
+  destacado?: string
+  tipo?: string
+  avaliacao?: number
+  descricao: string
+  capa: string
 }
 
-const Restaurant = ({ title, description, infos, image, rates }: Props) => (
+const Restaurant = ({
+  titulo,
+  destacado,
+  tipo,
+  avaliacao,
+  descricao,
+  capa
+}: Props) => (
   <Card>
-    <img src={image} alt={title} />
-    <Infos>
-      {infos.map((info) => (
-        <Tag size="big" key={info}>
-          {info}
-        </Tag>
-      ))}
-    </Infos>
+    <img src={capa} alt={titulo} />
+    <Infos>{tipo && <Tag>{tipo}</Tag>}</Infos>
     <CardSection>
-      <TitleCard>{title}</TitleCard>
+      <TitleCard>{titulo}</TitleCard>
       <Rate>
-        {rates.map((rate) => (
-          <Avaliacao key={rate.toString()}>{rate}</Avaliacao>
-        ))}
+        {avaliacao !== undefined && (
+          <Avaliacao>{avaliacao.toString()}</Avaliacao>
+        )}
       </Rate>
-      <Descricao>{description}</Descricao>
-      <Button type="link" to="/restaurantes" title="Saiba mais">
+      <Descricao>{descricao}</Descricao>
+      <ButtonLink to="/" title="Saiba mais">
         Saiba mais
-      </Button>
+      </ButtonLink>
     </CardSection>
   </Card>
 )
