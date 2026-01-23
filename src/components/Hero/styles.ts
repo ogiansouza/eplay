@@ -12,12 +12,8 @@ export const Imagem = styled.div`
   img {
     margin-top: 64px;
   }
-
-  h1 {
-    line-height: 0;
-  }
 `
-export const Slogan = styled.h2`
+export const Slogan = styled.h1`
   font-size: 36px;
   font-weight: 900;
   width: 539px;
