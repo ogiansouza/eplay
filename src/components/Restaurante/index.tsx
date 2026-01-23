@@ -37,7 +37,7 @@ const Rest = ({ title, description, stars, infos, image, id }: Props) => (
         </div>
       </CardSection>
       <Descricao>{description}</Descricao>
-      <Button type="link" to={`/perfil/${id}`} title="Saiba mais">
+      <Button as="link" to={`/perfil/${id}`} title="Saiba mais">
         Saiba mais
       </Button>
     </CardSections>

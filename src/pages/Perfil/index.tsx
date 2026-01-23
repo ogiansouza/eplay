@@ -16,7 +16,7 @@ const Perfil = () => {
 
   const { id } = useParams()
 
-  const { data: restaurante } = useGetRestauranteQuery(id!)
+  const { data: restaurante } = useGetRestauranteQuery(id ?? '')
 
   if (restaurante) {
     return (

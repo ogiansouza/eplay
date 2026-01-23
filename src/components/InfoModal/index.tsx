@@ -5,7 +5,7 @@ import { formataPreco } from '../../pages/Home'
 import Button from '../Button'
 import { Modal, ModalContent, ModalItems } from './styles'
 
-import { add, open } from '../../store/reducers/cart'
+import { add, openCart } from '../../store/reducers/cart'
 
 type Props = {
   produto: Product
@@ -18,11 +18,12 @@ const InfoModal = ({ produto, aberto, fecharModal }: Props) => {
 
   const addToCart = () => {
     dispatch(add(produto))
-    dispatch(open())
+    dispatch(openCart())
+    fecharModal()
   }
   return (
-    <Modal className={aberto ? 'visivel' : ''} onClick={fecharModal}>
-      <ModalContent className="container">
+    <Modal className={aberto ? 'visivel' : ''}>
+      <ModalContent className="container" onClick={(e) => e.stopPropagation()}>
         <header className="fechar">
           <img src={fechar} alt="fechar descrição" onClick={fecharModal} />
         </header>
@@ -35,7 +36,7 @@ const InfoModal = ({ produto, aberto, fecharModal }: Props) => {
             <p>{produto.descricao}</p>
             <p>{produto.porcao}</p>
             <Button
-              type="button"
+              as="button"
               title="Adicione o Prato ao carrinho"
               onClick={addToCart}
             >

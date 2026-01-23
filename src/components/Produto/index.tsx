@@ -21,11 +21,7 @@ const Produto = ({ image, title, description, onClick, aberto }: Props) => {
       <img src={image} alt={title} />
       <Titulo>{title}</Titulo>
       <Descricao>{getDescription(description)}</Descricao>
-      <Button
-        onClick={onClick}
-        type="button"
-        title="mais detalhes sobre o prato"
-      >
+      <Button onClick={onClick} as="button" title="mais detalhes sobre o prato">
         Mais detalhes
       </Button>
     </Card>

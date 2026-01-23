@@ -24,7 +24,7 @@ export const Links = styled.h3`
   font-size: 18px;
   color: ${cores.fonte};
 `
-export const LinkCart = styled.a`
+export const LinkCart = styled.span`
   margin-top: 82px;
   font-weight: bold;
   font-size: 18px;

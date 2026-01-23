@@ -3,44 +3,19 @@ import { cores } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 import lixeira from '../../assets/images/lixeira.png'
 
-export const Overlay = styled.div`
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background: ${cores.pretoTrans};
-`
-export const CartContainer = styled.div`
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  justify-content: flex-end;
-  z-index: 1;
-
-  &.is-open {
-    display: flex;
-  }
-`
-export const Sidebar = styled.aside`
-  background-color: ${cores.fonte};
-  color: ${cores.fundo};
-  padding: 40px 16px 0 16px;
-  z-index: 1;
-  max-width: 360px;
-  width: 100%;
-
+export const InfoCard = styled.div`
   ${ButtonContainer} {
     display: block;
     max-width: 100%;
     width: 100%;
-    background-color: ${cores.fundo2};
+    background-color: ${cores.fundo};
     color: ${cores.fonte};
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     margin: 0;
+    margin-bottom: 8px;
+    height: 24px;
   }
 
   .paragrafos {
@@ -98,4 +73,10 @@ export const CartProduto = styled.li`
     right: 8px;
     cursor: pointer;
   }
+`
+export const Paragrafo = styled.p`
+  font-size: 14px;
+  line-height: 22px;
+  color: ${cores.fundo3};
+  text-align: center;
 `
