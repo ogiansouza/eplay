@@ -1,46 +1,207 @@
-# Getting Started with Create React App
+# 🎮 ePlay - E-commerce de Games
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma plataforma completa de e-commerce especializada em jogos digitais, desenvolvida com React, TypeScript e Redux Toolkit. Interface moderna com sistema de temas, carrinho de compras e checkout integrado para uma experiência de compra fluida.
 
-## Available Scripts
+# 📸 Screenshots
 
-In the project directory, you can run:
+# 🌙 Tema Escuro
 
-### `npm start`
+![Screenshot Tema Escuro](https://raw.githubusercontent.com/Phillipml/eplay/main/public/screenshotDarkTheme.png)
+_Interface do ePlay em tema escuro com catálogo de games_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# 🌞 Tema Claro
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Screenshot Tema Claro](https://raw.githubusercontent.com/Phillipml/eplay/main/public/screeenshotLightTheme.png)
+_Interface do ePlay em tema claro com sistema de checkout_
 
-### `npm test`
+# 🚀 Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Catálogo de Games:
+Lista dinâmica de jogos com filtros por categoria
+## Páginas de Produtos:
+Detalhes completos de cada jogo
+## Carrinho de Compras:
+Sistema completo de adicionar/remover itens
+## Checkout Integrado:
+Fluxo de finalização com validação de dados
+## Sistema de Temas:
+Toggle entre tema escuro/claro
+## Design Responsivo:
+Otimizado para desktop, tablet e mobile
+## Validação de Formulários:
+Formik + Yup para validação robusta
+## Loading States:
+Estados de carregamento para melhor UX
+## Roteamento Avançado:
+Navegação fluida com React Router
+## Estado Global:
+Gerenciamento de estado com Redux Toolkit
 
-### `npm run build`
+# 🛠️ Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## React 19.1.0:
+Biblioteca para construção da interface
+## TypeScript 5.8.3:
+Superset do JavaScript com tipagem estática
+## Redux Toolkit 2.8.2:
+Gerenciamento de estado global
+## React Redux 9.2.0:
+Integração React com Redux
+## React Router 7.6.3:
+Roteamento e navegação
+## Styled Components 6.1.19:
+CSS-in-JS para estilização
+## Formik 2.4.6:
+Gerenciamento de formulários
+## Yup 1.6.1:
+Validação de esquemas
+## React Icons 5.5.0:
+Biblioteca de ícones
+## Vite 7.0.0:
+Build tool e servidor de desenvolvimento
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 📋 Pré-requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (versão 16 ou superior)
+- npm ou yarn
 
-### `npm run eject`
+# 🚀 Como Executar
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. **Clone o repositório**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone <url-do-repositorio>
+   cd eplay
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. **Instale as dependências**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Execute o projeto em modo de desenvolvimento**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm run dev
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Acesse a aplicação**
+   - Abra seu navegador e acesse `http://localhost:5173`
+
+# 📦 Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera build de produção
+- `npm run preview` - Visualiza o build de produção
+- `npm run lint` - Executa o linter ESLint com correção automática
+
+# 🏗️ Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── Banner/           # Banner promocional
+│   ├── Button/           # Componente de botão
+│   ├── Card/             # Card de produto
+│   ├── Cart/             # Carrinho de compras
+│   ├── Footer/           # Rodapé
+│   ├── Gallery/          # Galeria de imagens
+│   ├── Header/           # Cabeçalho
+│   ├── Hero/             # Seção hero
+│   ├── Product/          # Componente de produto
+│   └── ThemeButton/      # Botão de alternância de tema
+├── pages/
+│   ├── Categories/       # Página de categorias
+│   ├── Checkout/         # Página de checkout
+│   ├── Home/             # Página inicial
+│   └── Product/          # Página de produto
+├── services/
+│   └── api.ts           # Configuração da API
+├── store/
+│   └── reducers/        # Reducers do Redux
+├── themes/
+│   ├── dark.ts          # Tema escuro
+│   └── light.ts         # Tema claro
+├── types/
+│   └── types.d.ts       # Definições de tipos
+└── utils/
+    └── index.ts         # Funções utilitárias
+```
+
+# 🎯 Como Usar
+
+1. **Explore Games**: Navegue pela página inicial para ver o catálogo de jogos
+2. **Visualize Detalhes**: Clique em um jogo para ver informações detalhadas
+3. **Adicione ao Carrinho**: Selecione jogos e adicione ao carrinho
+4. **Finalize Compra**: Use o sistema de checkout para completar sua compra
+5. **Alterne Temas**: Use o botão de tema para alternar entre modo claro/escuro
+
+# 🎮 Funcionalidades do E-commerce
+
+# 🎯 **Catálogo de Games**
+
+- Lista dinâmica de jogos por categoria
+- Filtros e busca avançada
+- Galeria de imagens dos produtos
+- Informações detalhadas de cada jogo
+
+# 🛒 **Sistema de Carrinho**
+
+- Adicionar/remover jogos do carrinho
+- Cálculo automático de valores
+- Persistência do estado
+- Checkout integrado com validação
+
+# 🎨 **Sistema de Temas**
+
+- Toggle entre tema claro/escuro
+- Componentes adaptáveis
+- Design responsivo
+
+# 📝 **Validação de Formulários**
+
+- Formik para gerenciamento de estado
+- Yup para validação de esquemas
+- Validação em tempo real
+- Mensagens de erro personalizadas
+
+# 🔧 Arquitetura
+
+# **Estado Global (Redux)**
+
+- **Cart**: Gerencia itens do carrinho
+- **Persistência**: Estado mantido durante navegação
+- **Actions**: Ações para manipular o carrinho
+
+# **Componentes**
+
+- **Header**: Navegação e logo
+- **ProductList**: Lista de produtos
+- **Cart**: Carrinho lateral
+- **Checkout**: Formulário de finalização
+
+# 🎨 Características do Design
+
+- **Styled Components**: CSS-in-JS para estilização modular
+- **Design System**: Componentes reutilizáveis
+- **Responsividade**: Adaptação automática para diferentes dispositivos
+- **Temas Dinâmicos**: Sistema completo de temas claro/escuro
+- **UX Otimizada**: Interface intuitiva e moderna
+
+# 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+**Desenvolvido por:**
+Phillip Menezes
+
+**Email:**
+contato.phillip.menezes@gmail.com  
+**LinkedIn:**
+[Phillip Menezes](https://www.linkedin.com/in/phillip-menezes-063a39227/)  
+**GitHub:**
+[Phillipml](https://github.com/Phillipml/)
+---
+
+**Nota**: Este é um projeto de demonstração de e-commerce de games desenvolvido com as melhores práticas de React e TypeScript.

@@ -1,25 +1,35 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { ThemeProvider } from 'styled-components'
+import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from '@/store'
+
+import { MainContainer, GlobalStyle } from '@/styles/global'
+import Header from '@/components/Header'
+import RoutesApp from '@/routes'
+import Footer from '@/components/Footer/Footer'
+import LightTheme from '@/themes/light'
+import DarkTheme from '@/themes/dark'
+import Cart from '@/components/Cart'
+import { useState } from 'react'
+import ThemeButton from '@/components/ThemeButton/ThemeButton'
 
 function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <ThemeProvider theme={isDarkTheme ? DarkTheme : LightTheme}>
+          <GlobalStyle />
+          <MainContainer>
+            <Header />
+          </MainContainer>
+          <RoutesApp />
+          <Footer />
+          <ThemeButton onClick={() => setIsDarkTheme(!isDarkTheme)} />
+          <Cart />
+        </ThemeProvider>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
